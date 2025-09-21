@@ -1,0 +1,21 @@
+<div class="user-info">
+  <app-user-avatar [avatarUrl]="user.avatar_url"></app-user-avatar>
+
+  <div class="user-details">
+    <div class="name-and-btn">
+      <h2>{{ user.name || user.login }}</h2>
+      <a [href]="user.html_url" target="_blank" class="github-btn">
+        🔗 View on GitHub
+      </a>
+    </div>
+
+    <p class="bio">{{ user.bio }}</p>
+
+    <div class="meta">
+      <p *ngIf="user.location">📍 {{ user.location }}</p>
+      <p *ngIf="user.company">🏢 {{ user.company }}</p>
+      <p *ngIf="user.email">📧 {{ user.email }}</p>
+      <p>🗓️ Joined in {{ user.created_at | date:'yyyy' }}</p>
+    </div>
+  </div>
+</div>

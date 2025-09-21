@@ -1,59 +1,63 @@
-# DevFinder
+# 🚀 Dev Finder
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+Aplicação Angular para buscar perfis públicos de desenvolvedores no GitHub e exibir seus dados e repositórios ordenados por popularidade.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📦 Requisitos
 
-```bash
-ng serve
+Antes de instalar, certifique-se de ter:
+
+- **Node.js**: versão `18.x` ou superior
+- **Angular CLI**: versão `16.x` ou superior
+- **Gerenciador de pacotes**: `npm` (ou `yarn`, se preferir)
+
+---
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+
+```
+git clone https://github.com/neckelluiz/dev-finder.git
+cd dev-finder
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+2. Instale as dependências:
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+npm install
 ```
+💡 Se estiver usando yarn, substitua por yarn install
 
-## Building
+## 🧪 Rodar em desenvolvimento
 
-To build the project run:
+```
+npm start
+```
+- **A aplicação estará disponível em http://localhost:4200**
 
-```bash
+## 📦 Gerar build de produção
+
+```
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🗺️ Estrutura de Rotas
+/ → Página de busca (home)
 
-## Running unit tests
+/profile/:username → Página de perfil do usuário pesquisado
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## ✨ Funcionalidades
+🔍 Busca por username do GitHub
 
-```bash
-ng test
-```
+👤 Exibição de perfil com avatar, nome, bio, localização, empresa, email e data de entrada
 
-## Running end-to-end tests
+📦 Repositórios ordenados por número de estrelas (do maior para o menor)
 
-For end-to-end (e2e) testing, run:
+🔗 Links diretos para repositórios, site pessoal e Twitter (se disponíveis)
 
-```bash
-ng e2e
-```
+↩️ Botão de voltar para nova pesquisa
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+📱 Layout responsivo para desktop e tablet.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

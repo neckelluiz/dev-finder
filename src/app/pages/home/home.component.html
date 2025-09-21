@@ -1,0 +1,21 @@
+<div class="main-wrapper">
+  <div class="home-container">
+    <h1 class="title">
+      <span class="dev">Dev</span><span class="underscore">_</span><span class="finder">Finder</span>
+    </h1>
+
+    <div class="search-box">
+      <div class="input-wrapper">
+        <span class="material-symbols-outlined">search</span>
+        <input
+          type="text"
+          [(ngModel)]="username"
+          placeholder="Pesquisar..."
+          (keyup.enter)="searchUser()"
+        />
+      </div>
+
+      <button (click)="searchUser()">Buscar</button>
+    </div>
+  </div>
+</div>

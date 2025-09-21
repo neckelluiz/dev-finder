@@ -1,0 +1,15 @@
+<div class="stats">
+  <span><strong>{{ user.followers }}</strong> Seguidores</span>
+  <span><strong>{{ user.following }}</strong> Seguindo</span>
+  <span><strong>{{ user.public_repos }}</strong> Repositórios</span>
+</div>
+
+<div class="repo-list">
+  <h3>Repositórios</h3>
+  <ul>
+    <li *ngFor="let repo of repos">
+      <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+      <span>⭐ {{ repo.stargazers_count }}</span>
+    </li>
+  </ul>
+</div>

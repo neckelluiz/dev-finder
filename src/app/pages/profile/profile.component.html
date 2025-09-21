@@ -1,0 +1,11 @@
+<div class="profile-container" *ngIf="!error && user">
+  <button class="back-btn" (click)="goBack()">← Voltar</button>
+
+  <app-profile-header [user]="user"></app-profile-header>
+  <app-profile-card [user]="user" [repos]="repos"></app-profile-card>
+</div>
+
+<div *ngIf="error" class="error-message">
+  <p>Usuário não encontrado. Tente novamente.</p>
+  <button (click)="goBack()">Voltar</button>
+</div>
